@@ -1,0 +1,11 @@
+version: '3'
+services:
+  php:
+    image: php:8.1-alpine
+    container_name: php
+    volumes:
+      - .:/var/app
+    working_dir: /var/app
+    command: "php -S 0.0.0.0:80"
+    ports:
+      - 80:80
